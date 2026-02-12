@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Intro To HTML</title>
+		<link rel="stylesheet" href="./style.css" />
+		<style>
+			h2 {
+				color: blue;
+			}
+			p {
+				font-size: 12px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- This is a comment in HTML: The following line creates a main heading -->
+		<h1 style="color: red; font-style: italic; text-align: center">
+			Main title
+		</h1>
+		<!-- Biasanya 1 html file hanya memiliki satu buah <h1> -->
+		<h2 style="color: cadetblue">Important Section</h2>
+		<!-- <h2> lah yang biasanya menjadi heading utama yang dipakai berulang -->
+		<h3>Subheading</h3>
+		<h4>Smaller Topics</h4>
+		<h5>Minor Point</h5>
+		<h6>Tiny Detail</h6>
+		<!-- Horizontal Rule untuk menciptakan garis horizontal -->
+		<hr />
+		<!-- Paragraph -->
+		<p>First paragraph.</p>
+		<hr />
+		<p>Second line<br />with a break</p>
+		<!-- HTML Text Formatting: -->
+		<hr />
+		<p id="isi-banyak">
+			<!-- Lorem ipsum dolor sit amet consectetur,<br />
+			adipisicing elit. Laudantium dicta, quidem itaque minima iste, <br />
+			placeat facilis labore voluptatum at, doloribus maxime distinctio ab
+			soluta quos sint laborum incidunt culpa quisquam. <br /> -->
+			<b>Bold text</b><br />
+			<i>Italic text</i><br />
+			<u>Underlined text</u><br />
+			<strong>Strong text</strong><br />
+			<em>Emphasized text</em><br />
+			<mark>Marked text</mark><br />
+			<small>Small text</small><br />
+			<del>Deleted text</del><br />
+			<ins>Inserted text</ins><br />
+			P<sup>Superscript text</sup><br />
+			P<sub>Subscript text</sub><br />
+		</p>
+		<hr />
+		<!-- Lists: -->
+		<h2>Unordered List</h2>
+		<ul>
+			<li style="font-weight: bold">Item 1</li>
+			<li>
+				Item 2
+				<ul>
+					<li>Subitem 2.1</li>
+					<li>Subitem 2.2</li>
+				</ul>
+			</li>
+			<li>Item 3</li>
+		</ul>
+		<h2>Ordered List</h2>
+		<ol>
+			<li>First</li>
+			<li>
+				Second
+				<ol>
+					<li>Subfirst</li>
+					<li>Subsecond</li>
+				</ol>
+			</li>
+			<li>Third</li>
+		</ol>
+		<hr />
+		<!-- Tables -->
+		<h2>Table Example</h2>
+		<table border="1">
+			<!-- <tr> adalah table row -->
+			<tr>
+				<!-- <th> adalah table header -->
+				<th>Header 1</th>
+				<th>Header 2</th>
+			</tr>
+			<tr>
+				<!-- <td> adalah table data -->
+				<td>Data 1</td>
+				<td>Data 2</td>
+			</tr>
+			<tr>
+				<!-- Menggunakan colspan untuk menggabungkan dua kolom -->
+				<td colspan="2">Data 3</td>
+			</tr>
+			<tr>
+				<!-- Menggunakan rowspan untuk menggabungkan dua baris -->
+				<td rowspan="2">Data 4</td>
+				<td>Data 5</td>
+			</tr>
+			<tr>
+				<td>Data 6</td>
+			</tr>
+		</table>
+		<hr />
+		<!-- Anchor Tags/Links -->
+		<!--<a> tag bersifat span/inline di mana lebarnya hanya sebesar kontennya -->
+		<!-- Absolute Link -->
+		<a href="https://www.duckduckgo.com" target="_blank">Visit DuckDuckGo</a>
+		<!-- Relative Link -->
+		<a href="page1.html">Go to Page 1</a>
+		<a href="page2.html">Go to Page 2</a>
+		<hr />
+		<!-- Images -->
+		<h2>Local Image</h2>
+		<img src="assets/example-image.jpg" alt="Local Image" width="300" />
+		<h2>External Image</h2>
+		<img
+			src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr1T5Pb4Ua7epfE27T3Z0bwJ9P0xfeNoOMgw&s"
+			alt="External Image"
+			width="300"
+		/>
+		<figure>
+			<img
+				src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkZJj6epcFTGFbJdJsdgVYh133mDCVTEg-kA&s"
+				alt="Captain America"
+				width="300"
+			/>
+			<figcaption>Captain America</figcaption>
+		</figure>
+		<hr />
+		<!-- Forms -->
+		<h2>Contact Form</h2>
+		<form action="#" method="post">
+			<label for="name">Name:</label><br />
+			<input type="text" id="name" name="name" required /><br />
+			<label for="email">Email:</label><br />
+			<input type="email" id="email" name="email" required /><br />
+			<label for="message">Message:</label><br />
+			<textarea
+				id="message"
+				name="message"
+				rows="4"
+				cols="50"
+				required
+			></textarea
+			><br />
+			<button type="submit">Submit</button>
+		</form>
+		<hr />
+		<!-- Select Input -->
+		<h2>Select Input Example</h2>
+		<form action="#" method="post">
+			<label for="cars">Choose a car:</label><br />
+			<select id="cars" name="cars">
+				<option value="volvo">Volvo</option>
+				<option value="saab">Saab</option>
+				<option value="mercedes">Mercedes</option>
+				<option value="audi">Audi</option></select
+			><br />
+			<button type="submit">Submit</button>
+		</form>
+		<hr />
+		<!-- Label, Fieldset, & Legend -->
+		<h2>Fieldset Example</h2>
+		<form action="#" method="post">
+			<fieldset>
+				<legend>Personal Information</legend>
+				<label for="fname">First Name:</label><br />
+				<input type="text" id="fname" name="fname" required /><br />
+				<label for="lname">Last Name:</label><br />
+				<input type="text" id="lname" name="lname" required /><br />
+			</fieldset>
+			<button type="submit">Submit</button>
+		</form>
+		<hr />
+		<!-- Division Tag | <div> secara umum digunakan untuk mengelompokkan elemen-elemen HTML -->
+		<div>
+			<div id="header" class="rounded-corners">
+				<h2>Header Section</h2>
+				<p>This is the top part of the page.</p>
+			</div>
+			<div id="content" class="rounded-corners">
+				<h2>Content Section</h2>
+				<p>This is the main content area of the page.</p>
+			</div>
+			<div id="footer" class="rounded-corners">
+				<h2>Footer Section</h2>
+				<p>This is the bottom part of the page.</p>
+			</div>
+		</div>
+	</body>
+</html>

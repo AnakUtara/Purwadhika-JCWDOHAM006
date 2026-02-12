@@ -1,0 +1,90 @@
+/* Ini element selector */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body::selection {
+	background-color: yellow;
+	color: black;
+}
+
+hr {
+	border-width: 2px;
+	border-color: #fece32;
+}
+
+h1::before {
+	content: "🫀";
+}
+
+h1::after {
+	content: "👁️";
+}
+
+h2:hover {
+	color: black;
+}
+
+#isi-banyak::first-letter {
+	font-size: 200%;
+	color: red;
+	font-weight: bold;
+}
+
+#isi-banyak::first-line {
+	text-transform: uppercase;
+}
+
+/* Ini class & id selector */
+
+#header {
+	background-color: rgb(0, 0, 0);
+	color: white;
+}
+
+#content {
+	background: linear-gradient(red, maroon);
+	color: #ffffff;
+}
+
+#footer {
+	background-image: url("assets/example-image.jpg");
+	height: 100vh;
+}
+
+.rounded-corners {
+	border-radius: 15px;
+	/* border-width: 10px;
+	border-style: solid;
+	border-color: chartreuse; */
+	border: 10px solid chartreuse;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+a[href] {
+	color: white;
+	text-decoration: none;
+	background-color: black;
+	border-radius: 15px;
+	padding: 5px 10px;
+}
+
+a:link {
+	background-color: blue;
+}
+
+a:visited {
+	background-color: rebeccapurple;
+}
+
+a:hover {
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+}
+
+a:active {
+	background-color: yellow;
+	color: red;
+}
