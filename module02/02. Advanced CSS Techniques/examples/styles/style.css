@@ -21,7 +21,9 @@
 	justify-content: center;
 	margin: 24px 0;
 	font-weight: bold;
-	transition: transform 0.5s cubic-bezier(0.4, 2, 0.6, 1), background 0.3s;
+	transition:
+		transform 0.5s cubic-bezier(0.4, 2, 0.6, 1),
+		background 0.3s;
 	cursor: pointer;
 }
 
@@ -30,12 +32,12 @@
 }
 
 /* 2D Translate */
-/* .translate2d {
+.translate2d {
 	transform: translate(0, 0);
-} */
+}
 
 .translate2d:hover {
-	transform: translate(60px, 0);
+	transform: translate(60px, 10px);
 	background: #a5b4fc;
 }
 
@@ -62,7 +64,7 @@
 /* Keyframes from/to */
 
 .keyframes-fromto:hover {
-	animation: moveFromTo 1s forwards;
+	animation: moveFromTo 1s normal;
 }
 
 @keyframes moveFromTo {
@@ -131,7 +133,10 @@
 	font-weight: bold;
 	padding: 8px 16px;
 	border-radius: 4px;
-	transition: background 0.3s, color 0.3s, transform 0.3s;
+	transition:
+		background 0.3s,
+		color 0.3s,
+		transform 0.3s;
 }
 
 .navbar a:hover {
