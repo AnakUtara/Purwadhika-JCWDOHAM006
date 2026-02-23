@@ -14,6 +14,13 @@ import { useEffect, useRef, useState } from "react";
 import LinkButton from "./components/ui/link.button";
 import FilterButtons from "./components/ui/filter.buttons";
 
+// Di aplikasi ini implementasi hook disederhanakan cuma menggunakan useState, useEffect, dan useRef aja.
+// Semoga membantu mengurangi beban pikiran untuk mengerti konsep hooks. Ga perlu tau semuanya sekaligus.
+// Lupain dulu hooks2 macem useReducer, useMemo, useCallback, useContext custom hooks, dll yang mungkin masih membingungkan terutama untuk yang baru banget kenal React
+// Fokus utama di sini murni untuk paham konsep dasar React Hooks: useState, useEffect, dan useRef, serta gimana mereka kerjasama untuk buat aplikasi yang interaktif dan responsif.
+// Ga usah pusing mikirin optimasi performa dengan useMemo atau useCallback, atau manajemen state yang kompleks dengan useReducer, atau bahkan membuat custom hooks untuk fitur tertentu.
+// Nanti kalau udah nyaman dengan konsep2 dasar ini sambil jalan kita pakai yang lain juga ya.
+
 function App() {
 	const [toDoList, setToDoList] = useState<TToDo[]>(toDoData);
 
@@ -22,6 +29,8 @@ function App() {
 	const activeTasksCount = toDoList.filter((todo) => !todo.isDone).length;
 	const taskSuffix = activeTasksCount === 1 ? "task" : "tasks";
 
+	// Memakai konvensi handle prefix untuk function yang menangani event atau aksi tertentu
+	// Memudahkan identifikasi fungsi juga mengurangi kebingungan menamakan nama fungsi yang tidak konsisten
 	const handleFocusInput = () => {
 		mainInputRef.current?.focus();
 	};
@@ -32,6 +41,7 @@ function App() {
 		}
 	};
 
+	// useEffect dipisah untuk menangani side effect dengan spesifik menggunakan kaidah Separation of Concerns, supaya lebih rapih dan mudah dipahami
 	useEffect(() => {
 		handleFocusInput();
 	}, []);
@@ -100,7 +110,7 @@ function App() {
 											key={todo.id}
 											toDo={todo}
 											onToggleDone={() => handleToggleDone(todo.id)}
-											onPressX={() => handleDeleteToDo(todo.id)}
+											onPressDelete={() => handleDeleteToDo(todo.id)}
 										/>
 									))
 									.reverse()

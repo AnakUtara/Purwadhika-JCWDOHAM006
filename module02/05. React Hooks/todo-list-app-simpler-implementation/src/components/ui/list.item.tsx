@@ -8,10 +8,10 @@ import ConfirmationDialog from "./confirmation.dialog";
 type Props = {
 	toDo: TToDo;
 	onToggleDone: (id: number) => void;
-	onPressX: (id: number) => void;
+	onPressDelete: (id: number) => void;
 };
 
-const ListItem = ({ toDo, onToggleDone, onPressX }: Props) => {
+const ListItem = ({ toDo, onToggleDone, onPressDelete }: Props) => {
 	const { id, title, isDone } = toDo;
 
 	return (
@@ -41,7 +41,7 @@ const ListItem = ({ toDo, onToggleDone, onPressX }: Props) => {
 							<X className="group-hover/btn:opacity-100 transition duration-300 group-hover/btn:text-destructive" />
 						</Button>
 					}
-					onConfirm={() => onPressX(id)}
+					onConfirm={() => onPressDelete(id)}
 				/>
 			</ItemActions>
 		</Item>
