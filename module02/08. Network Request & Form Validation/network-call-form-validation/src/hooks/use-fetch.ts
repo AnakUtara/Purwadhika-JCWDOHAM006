@@ -24,7 +24,8 @@ const useFetch = <T>(endpoint: string, config?: AxiosRequestConfig) => {
 
 	useEffect(() => {
 		fetchData();
-	}, [endpoint, config]);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 
 	return { data, isLoading, error };
 };
