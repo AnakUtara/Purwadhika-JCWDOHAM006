@@ -4,6 +4,16 @@ import todos from "./data/todos.json";
 import fs from "fs/promises";
 import type ITodo from "./model/todo.model.js";
 
+/* 
+Issue runtime error ES Module saat run express app disebabkan oleh ts-node-dev yang tidak kompatibel dengan
+sistem module ES. Javascript ES module (ESM) memiliki cara kerja yang berbeda dengan CommonJS, terutama dalam hal impor dan ekspor modul.
+Untuk mengatasi masalah ini, kita dapat menggunakan tsx sebagai alternatif untuk menjalankan aplikasi TypeScript dengan dukungan penuh untuk ES module. 
+Dengan menggunakan tsx, kita dapat memastikan bahwa aplikasi berjalan dengan baik tanpa mengalami masalah kompatibilitas yang disebabkan oleh ts-node-dev.
+Periksa package.json untuk melihat perubahan pada script dev dan dependencies yang digunakan.
+Type module bisa kembali digunakan karena kali ini secara runtime tsx sudah support ES Module.
+Sehingga editor dan runtime sudah sync untuk menggunakan ES Module & bukan commonjs.
+*/
+
 const PORT = 8000;
 
 const todosPath = "./src/data/todos.json";
