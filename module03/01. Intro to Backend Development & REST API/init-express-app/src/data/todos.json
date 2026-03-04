@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "title": "Learn Express",
+    "completed": false,
+    "createdAt": "2024-06-01T10:00:00Z",
+    "updatedAt": "2024-06-01T10:00:00Z"
+  },
+  {
+    "id": 2,
+    "title": "Build a REST API",
+    "completed": false,
+    "createdAt": "2024-06-01T10:00:00Z",
+    "updatedAt": "2024-06-01T10:00:00Z"
+  },
+  {
+    "id": 3,
+    "title": "Master Backend Development",
+    "completed": false,
+    "createdAt": "2024-06-01T10:00:00Z",
+    "updatedAt": "2024-06-01T10:00:00Z"
+  },
+  {
+    "id": 4,
+    "title": "Deploy the API",
+    "completed": false,
+    "createdAt": "2024-06-01T10:00:00Z",
+    "updatedAt": "2024-06-01T10:00:00Z"
+  },
+  {
+    "id": 5,
+    "title": "Test the API",
+    "completed": false,
+    "createdAt": "2024-06-01T10:00:00Z",
+    "updatedAt": "2024-06-01T10:00:00Z"
+  },
+  {
+    "id": 6,
+    "title": "Document the API",
+    "completed": false,
+    "createdAt": "2024-06-01T10:00:00Z",
+    "updatedAt": "2024-06-01T10:00:00Z"
+  },
+  {
+    "id": 7,
+    "title": "Maintain the API",
+    "completed": false,
+    "createdAt": "2024-06-01T10:00:00Z",
+    "updatedAt": "2024-06-01T10:00:00Z"
+  },
+  {
+    "id": 8,
+    "title": "Liburan Idul Fitri",
+    "completed": true,
+    "createdAt": "2026-03-03T07:47:30.999Z",
+    "updatedAt": "2026-03-03T07:51:18.620Z"
+  },
+  {
+    "id": 9,
+    "title": "Liburan Sebentar Lagi",
+    "completed": false,
+    "createdAt": "2026-03-04T05:07:31.589Z",
+    "updatedAt": "2026-03-04T05:07:31.596Z"
+  }
+]
