@@ -1,0 +1,17 @@
+{
+	"extends": "./tsconfig.json", // Extend your main config
+	"compilerOptions": {
+		"module": "CommonJS",
+		"target": "esnext", // Or whatever modern target you prefer
+		"outDir": "dist-test", // Use a separate output directory for compiled tests
+		"rootDir": ".",
+		"esModuleInterop": true,
+		"resolveJsonModule": true,
+		"isolatedModules": false, // Good for testing setup
+		"sourceMap": true,
+		"lib": ["ESNext"],
+		"types": ["jest", "node", "supertest"] // Add testing types
+	},
+	"include": ["src/**/*.ts", "tests/**/*.ts"],
+	"exclude": ["node_modules"]
+}
