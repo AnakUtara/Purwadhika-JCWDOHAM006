@@ -12,6 +12,12 @@ datasource db {
   provider = "postgresql"
 }
 
+enum Category {
+  WORK
+  PERSONAL
+  HOBBY
+}
+
 model User {
   id           Int      @id @default(autoincrement())
   name         String?
