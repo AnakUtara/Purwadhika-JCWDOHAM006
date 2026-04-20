@@ -1,0 +1,29 @@
+volumes:
+  db_data:
+
+services:
+  backend:
+    build:
+      context: ./api
+      dockerfile: Dockerfile.dev
+    container_name: docker-composed-backend
+    ports:
+      - "8000:3000"
+    env_file:
+      - ./api/.env.development.local
+    depends_on:
+      - db
+    volumes:
+      # This mounts the local api directory to /app in the container,
+      # allowing for live code changes without rebuilding the image.
+      - ./api:/app
+      - /app/node_modules
+  db:
+    image: postgres:16-alpine
+    env_file:
+      - ./api/.env.development.local
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+    container_name: docker-composed-db
